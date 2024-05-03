@@ -1,4 +1,3 @@
-package Recursion;
 
 public class Factorial_3 {
     public static void main(String[] args) {
@@ -7,11 +6,11 @@ public class Factorial_3 {
     }
 
     private static int solveProblem(int n) {
-        if (n == 1) {
+        if (n == 1)
             return 1;
-        }
+
         int f = solveProblem(n - 1);
-        return n * f;
+        return f * n;
     }
 
 }

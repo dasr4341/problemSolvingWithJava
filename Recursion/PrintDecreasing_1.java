@@ -1,4 +1,3 @@
-package Recursion;
 
 public class PrintDecreasing_1 {
     public static void main(String[] args) {
@@ -12,7 +11,6 @@ public class PrintDecreasing_1 {
         }
         System.out.println(n);
         solveProblem(n - 1);
-
     }
 
 }

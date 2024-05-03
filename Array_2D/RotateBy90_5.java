@@ -8,8 +8,6 @@ public class RotateBy90_5 {
                 { 7, 8, 9 }
         };
 
-        int l = arr.length - 1;
-
         // transpose
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j < arr[0].length; j++) {
@@ -18,14 +16,15 @@ public class RotateBy90_5 {
                 arr[j][i] = temp;
             }
         }
-
         for (int i = 0; i < arr.length; i++) {
-            reverse(arr[i]);
+            for (int j = 0; j < arr[0].length; j++) {
+                reverse(arr[i]);
+            }
         }
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
-                System.out.print(arr[i][j]);
+                System.out.print(arr[i][j] + " ");
             }
             System.out.println("");
         }
@@ -42,5 +41,7 @@ public class RotateBy90_5 {
             i++;
             j--;
         }
+
     }
+
 }

@@ -11,24 +11,28 @@ public class SortedSearch_9 {
         solveProblem(arr, 1);
     }
 
-    private static void solveProblem(int[][] arr, int find) {
-
-        int iMax = arr.length;
-        int jMax = arr[0].length;
-
+    private static void solveProblem(int[][] arr, int eleToFind) {
+        int l = arr[0].length;
         int i = 0;
-        int j = jMax - 1;
-        while (i < iMax && j >= 0 && j < jMax) {
+        int j = l - 1;
+        boolean isAvailable = false;
+
+        while (j >= 0 && i < arr.length) {
             int ele = arr[i][j];
-            if (find > ele) {
+            if (ele < eleToFind) {
                 i++;
-            } else if (find < ele) {
+            } else if (ele > eleToFind) {
                 j--;
             } else {
+                isAvailable = true;
                 System.out.println(i + " " + j);
                 break;
             }
-
         }
+        if (!isAvailable) {
+            System.out.println("Element not found !");
+        }
+
     }
+
 }
